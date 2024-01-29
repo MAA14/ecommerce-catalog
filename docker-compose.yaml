@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  ecommerce_catalog:
+    build: ./
+    container_name: ecommerce_catalog_c
+    ports: [8082:8080]
+    volumes:
+      - ./:/app # Pake Relative Path dimulai dari lokasi docker-compose.yaml
+      - /app/node_modules # Abstract volume
