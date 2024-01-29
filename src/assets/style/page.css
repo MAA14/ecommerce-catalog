@@ -1,0 +1,478 @@
+/* ----------------------------------------- CSS Setup */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root {
+  /* Font Family */
+  --font-family-inter: 'Inter', sans-serif;
+
+  /* Color */
+  --color-pattern-women: #fde2ff;
+  --color-unique-women: #720060;
+
+  --color-pattern-men: #d6e6ff;
+  --color-unique-men: #002772;
+
+  --color-pattern-error: #dcdcdc;
+
+  --color-content-container: #ffffff;
+  --color-primary-text: #1e1e1e;
+  --color-secondary-text: #3f3f3f;
+
+  --color-loading-1: #343a40;
+  --color-loading-2: #6c757d;
+  --color-loading-3: #e9ecef;
+}
+
+* {
+  font-family: var(--font-family-inter);
+  position: relative;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ------------------------------------- Product Section */
+#container-product {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 65%;
+}
+
+.container-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  min-height: 70vh;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* --------------------Image */
+.container-image {
+  margin: 20px;
+  width: 30%;
+  height: 70vh;
+}
+
+.container-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --------------------Details */
+.container-details {
+  width: 53%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-text {
+  height: 67%;
+}
+
+.info {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-secondary-text);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.category {
+  font-size: 18px;
+}
+
+.rating-number {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* ---------------------Rating Bubbles*/
+.container-rating {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.rating-bubles {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.rating-bubles .bubble {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 2px;
+}
+
+.bubble .filler {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Description */
+.description {
+  font-size: 20px;
+}
+
+/* Interact */
+.interact-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 600;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-top: 10px;
+}
+
+.container-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  position: relative;
+  width: calc(50% - 10px);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.btn.fill p {
+  color: #ffffff;
+}
+
+.btn:hover p {
+  color: #ffffff;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: scale 0.3s ease-in;
+  scale: 0;
+}
+
+.btn:hover::before {
+  scale: 1;
+}
+
+.btn.fill::before {
+  scale: 1;
+}
+
+.btn.fill:hover::before {
+  scale: 0;
+}
+
+/* --------------------------------------------------- Men Section */
+.background-pattern.men {
+  background-color: var(--color-pattern-men);
+}
+
+.men .title {
+  color: var(--color-unique-men);
+}
+
+.bubble.men {
+  border: 1px solid var(--color-unique-men);
+}
+
+.bubble.men .filler {
+  background-color: var(--color-unique-men);
+}
+
+.price.men {
+  color: var(--color-unique-men);
+}
+
+.container-button.men .btn {
+  border: 3px solid var(--color-unique-men);
+  color: var(--color-unique-men);
+}
+
+.container-button.men .btn::before {
+  background-color: var(--color-unique-men);
+}
+
+.container-button.men .btn.fill::before {
+  background-color: var(--color-unique-men);
+}
+
+.container-button.men .btn.fill:hover p {
+  color: var(--color-unique-men);
+}
+
+/* --------------------------------------------------- Women Section */
+.background-pattern.women {
+  background-color: var(--color-pattern-women);
+}
+
+.women .title {
+  color: var(--color-unique-women);
+}
+
+.bubble.women {
+  border: 1px solid var(--color-unique-women);
+}
+
+.bubble.women .filler {
+  background-color: var(--color-unique-women);
+}
+
+.price.women {
+  color: var(--color-unique-women);
+}
+
+.container-button.women .btn {
+  border: 3px solid var(--color-unique-women);
+  color: var(--color-unique-women);
+}
+
+.container-button.women .btn::before {
+  background-color: var(--color-unique-women);
+}
+
+.container-button.women .btn.fill::before {
+  background-color: var(--color-unique-women);
+}
+
+.container-button.women .btn.fill:hover p {
+  color: var(--color-unique-women);
+}
+
+/* ----------------------------------------------- Unavailable Section */
+.container-content.unavailable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-pattern.unavailable {
+  background-color: #d8d7d7;
+}
+
+.container-button.unavailable {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.container-button.unavailable .btn {
+  border: 3px solid #000;
+  color: var(--color-secondary-text);
+}
+
+.container-button.unavailable .btn::before {
+  background-color: #000;
+}
+
+.container-button.unavailable .btn.fill::before {
+  background-color: #000;
+}
+
+.container-button.unavailable .btn.fill:hover p {
+  color: #000;
+}
+
+.error-message {
+  position: relative;
+  z-index: 3;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Sad Emotes ------------------------ WARNING!!! 90deg CONDITION!!! TOP (From CSS code) = RIGHT (From your View), RIGHT = BOTTOM, BOTTOM = LEFT, LEFT = TOP, and WIDTH = HEIGHT, HEIGHT = WIDTH */
+.sad-emote-container {
+  position: absolute;
+  /* Reverse */
+  transform: rotate(90deg);
+  width: 70vh;
+  height: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.eyebrow-emote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32vh;
+  height: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.brow {
+  width: 20vw;
+}
+
+#right-brow {
+  transform: rotate(280deg);
+  margin-bottom: -18vw;
+  margin-top: 2vw;
+}
+
+#left-brow {
+  transform: scaleX(-1) scaleY(-1) rotate(70deg);
+}
+
+.sad-emote {
+  margin-top: 45vw;
+  letter-spacing: -6vw;
+  font-size: 55vw;
+  font-weight: 400;
+  opacity: 0.2;
+}
+
+/* ----------------------------------------------- Loading Section */
+.loading::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-loading-1),
+    var(--color-loading-2),
+    var(--color-loading-3)
+  );
+  background-size: 400%;
+  animation: gradientAnimation 2s ease-in infinite;
+  border-radius: 4px;
+  z-index: 99;
+}
+
+.background-pattern.loading {
+  background: var(--color-loading-1);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: -80% 0%;
+  }
+
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+.loading {
+  cursor: default;
+}
+
+.container-image.loading img {
+  height: 0;
+}
+
+.title.loading {
+  height: 70px;
+}
+
+.info.loading {
+  height: 20px;
+}
+
+.price.loading {
+  width: 30%;
+}
+
+.container-button .btn.loading {
+  border: none;
+}
+
+.container-button .btn.loading::before {
+  scale: 0;
+}
+
+.container-image.loading::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-loading-1);
+  border-radius: 10px;
+}
