@@ -1,7 +1,7 @@
 # ecommerce
 
 ## Website Link
-https://ecommerce-catalog-8f4de.firebaseapp.com/
+https://ecommerce-catalog-8f4de.firebaseapp.com
 
 ## Project setup
 ```
