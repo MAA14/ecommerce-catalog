@@ -1,9 +1,7 @@
 # ecommerce
 
 ## Website Link
-```
-https://discord.com/channels/616897751107502090/937376584401301504/1201567635243016282
-```
+https://ecommerce-catalog-8f4de.firebaseapp.com/
 
 ## Project setup
 ```
